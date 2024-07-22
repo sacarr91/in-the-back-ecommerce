@@ -17,7 +17,9 @@ Product.belongsTo(Category, {
 
 // Tag belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
-  through: 'ProductTag'
+  through: 'ProductTag',
+  onDelete: 'SETNULL',
+
 });
 
 // Products belongToMany Tags (through ProductTag)
