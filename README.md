@@ -4,6 +4,8 @@ In-The-Back is an e-commerce backend for managing retail inventory.
 
 ## Demo
 
+https://github.com/user-attachments/assets/afa8645b-3937-47e6-9e93-01a5e5d69687
+
 
 ## Installation
 
