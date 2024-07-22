@@ -17,25 +17,17 @@ Product.belongsTo(Category, {
 
 // Tag belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
-  through: {
-    model: ProductTag,
-    unique: false,
-  },
-    as: 'products_in_tag'
-}); 
+  through: 'ProductTag'
+});
 
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
-  through: {
-    model: ProductTag,
-    unique: false,
-  },
-  as: 'tags_on-product'
-}); 
+  through: 'ProductTag'
+}),
 
-module.exports = {
-  Product,
-  Category,
-  Tag,
-  ProductTag,
-};
+  module.exports = {
+    Product,
+    Category,
+    Tag,
+    ProductTag,
+  };

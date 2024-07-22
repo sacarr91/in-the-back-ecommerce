@@ -55,7 +55,8 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   try {
-    const catData = await Category.update(req.body);
+    const catData = await Category.findOne({where: {id: req.params.id}});
+    const numTouched = catData.update(req.body);
 
     if (!catData) {
       res.status(404).json({ message: `Category not found. Could not update.` });
